@@ -1,2 +1,24 @@
-# KDT-IaaS-2-ProjectB-3team
-카메라를 통해서  실시간으로 야생 동물 분류 및 행동 예측을 통해 위치 기반 주변 알림 시스템
+# tester
+
+## Project setup
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
