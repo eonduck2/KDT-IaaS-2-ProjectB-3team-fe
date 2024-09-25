@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div class="upload-container">
     <h2>이미지 업로드</h2>
-    <input type="file" @change="onFileChange" />
-    <button @click="uploadImage">업로드</button>
-    <p v-if="message">{{ message }}</p>
+    <input type="file" @change="onFileChange" class="file-input" />
+    <button @click="uploadImage" class="upload-button">업로드</button>
+    <p v-if="message" class="upload-message">{{ message }}</p>
   </div>
 </template>
 
@@ -14,7 +14,7 @@ import { uploadImageToBackend } from "../services/api";
 export default defineComponent({
   data() {
     return {
-      selectedFile: null as File | null, // 파일 타입을 명시
+      selectedFile: null as File | null, // 파일 타입 명시
       message: "" as string, // 문자열 타입 명시
     };
   },
@@ -39,3 +39,54 @@ export default defineComponent({
   },
 });
 </script>
+
+<style scoped>
+.upload-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin-top: 30%;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.file-input {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.upload-button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.upload-button:hover {
+  background-color: #218838;
+}
+
+.upload-message {
+  margin-top: 15px;
+  font-size: 0.9em;
+  color: #d9534f;
+}
+</style>

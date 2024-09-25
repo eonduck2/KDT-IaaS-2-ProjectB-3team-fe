@@ -1,30 +1,29 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view />
+  <div id="app">
+    <ImageUpload />
+    <!-- 이미지 업로드 컴포넌트 추가 -->
+  </div>
 </template>
 
-<style>
+<script lang="ts">
+import { defineComponent } from "vue";
+import ImageUpload from "./components/ImageUpload.vue";
+
+export default defineComponent({
+  name: "App",
+  components: {
+    ImageUpload,
+  },
+});
+</script>
+
+<style scoped>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
 }
 </style>
