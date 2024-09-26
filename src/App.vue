@@ -1,5 +1,8 @@
 <template>
-  <div id="app">
+  <div
+    id="app"
+    class="flex justify-center align-center relative w-screen h-screen"
+  >
     <ImageUpload />
     <!-- 이미지 업로드 컴포넌트 추가 -->
   </div>
@@ -16,14 +19,3 @@ export default defineComponent({
   },
 });
 </script>
-
-<style scoped>
-#app {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-}
-</style>

@@ -1,9 +1,22 @@
 <template>
-  <div class="upload-container">
-    <h2>이미지 업로드</h2>
-    <input type="file" @change="onFileChange" class="file-input" />
-    <button @click="uploadImage" class="upload-button">업로드</button>
-    <p v-if="message" class="upload-message">{{ message }}</p>
+  <div
+    class="upload-container bg-gray-40 p-6 rounded-lg shadow-md max-w-sm max-h-52 mx-auto flex flex-col items-center mt-96"
+  >
+    <h2 class="text-xl font-semibold mb-4 text-gray-800">이미지 업로드</h2>
+    <input
+      type="file"
+      @change="onFileChange"
+      class="file-input mb-3 p-2 border border-gray-300 rounded-md w-full cursor-pointer"
+    />
+    <button
+      @click="uploadImage"
+      class="upload-button bg-green-600 text-white py-2 px-4 rounded-md mt-3 transition duration-300 hover:bg-green-700"
+    >
+      업로드
+    </button>
+    <p v-if="message" class="upload-message mt-4 text-sm text-red-500">
+      {{ message }}
+    </p>
   </div>
 </template>
 
@@ -40,7 +53,7 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
+<!-- <style scoped>
 .upload-container {
   display: flex;
   flex-direction: column;
@@ -50,6 +63,7 @@ export default defineComponent({
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   max-width: 400px;
+  max-height: 200px;
   margin-top: 30%;
 }
 
@@ -89,4 +103,4 @@ h2 {
   font-size: 0.9em;
   color: #d9534f;
 }
-</style>
+</style> -->
