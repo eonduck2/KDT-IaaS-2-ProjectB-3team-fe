@@ -1,8 +1,5 @@
 <template>
-  <div
-    id="app"
-    class="flex justify-center align-center relative w-screen h-screen"
-  >
+  <div id="app">
     <ImageUpload />
     <!-- 이미지 업로드 컴포넌트 추가 -->
   </div>
