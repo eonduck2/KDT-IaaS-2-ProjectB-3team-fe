@@ -5,3 +5,4 @@ export default class LocationInputter extends ImplementedLocationInputter {
     super();
   }
 }
+

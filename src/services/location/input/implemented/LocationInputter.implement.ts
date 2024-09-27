@@ -1,3 +1,4 @@
+import instanceChecker from "@/modules/check/instanceChecker";
 import AbstractedLocationInputter from "../abstract/LocationInputter.abstract";
 
 export default class ImplementedLocationInputter extends AbstractedLocationInputter {
@@ -6,9 +7,7 @@ export default class ImplementedLocationInputter extends AbstractedLocationInput
   constructor(initialInput = "") {
     super();
 
-    if (new.target === ImplementedLocationInputter) {
-      throw new Error("Cannot create an instance of an abstract class.");
-    }
+    instanceChecker(new.target, ImplementedLocationInputter);
 
     this.manualInput = initialInput;
   }
