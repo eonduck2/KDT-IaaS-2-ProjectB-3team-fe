@@ -1,1 +1,1 @@
-export default interface TLocationManager {}
+export default interface ILocationManager {}
