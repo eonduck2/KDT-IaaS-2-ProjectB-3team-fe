@@ -7,4 +7,3 @@ import "primevue/resources/primevue.min.css"; // PrimeVue 기본 스타일
 import "primeicons/primeicons.css"; // PrimeIcons 스타일
 
 createApp(App).use(store).use(router).mount("#app");
-
