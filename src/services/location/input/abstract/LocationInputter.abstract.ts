@@ -33,4 +33,3 @@ export default abstract class AbstractedLocationInputter
   // 입력된 데이터를 지우는 추상 메소드, 하위 클래스에서 구현해야 함
   public abstract clearInput(): void;
 }
-

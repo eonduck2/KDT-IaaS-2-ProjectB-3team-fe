@@ -14,10 +14,6 @@ describe("instanceChecker", () => {
     const testClass = class {};
     const instanceCheckerStaticMessage = "cannot be instantiated";
 
-    thrower.mockImplementation((message: string) => {
-      throw new Error(message);
-    });
-
     expect(() => {
       instanceChecker(testClass, testClass);
     }).toThrow(`${testClass} ${instanceCheckerStaticMessage}`);

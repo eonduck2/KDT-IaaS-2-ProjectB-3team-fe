@@ -9,4 +9,3 @@ export default class LocationInputter extends ImplementedLocationInputter {
     super(); // ImplementedLocationInputter의 생성자를 호출하여 기본 상태 초기화
   }
 }
-
