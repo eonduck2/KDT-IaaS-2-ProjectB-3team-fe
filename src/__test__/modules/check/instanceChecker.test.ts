@@ -3,7 +3,7 @@ import { jest } from "@jest/globals";
 import instanceChecker from "@/modules/check/instanceChecker";
 import thrower from "@/modules/throw/thrower";
 
-jest.mock("../throw/thrower");
+// jest.mock("../throw/thrower");
 
 describe("instanceChecker", () => {
   afterEach(() => {
@@ -13,10 +13,6 @@ describe("instanceChecker", () => {
   it("should throw an error when target is the same as className", () => {
     const testClass = class {};
     const instanceCheckerStaticMessage = "cannot be instantiated";
-
-    thrower.mockImplementation((message: string) => {
-      throw new Error(message);
-    });
 
     expect(() => {
       instanceChecker(testClass, testClass);
