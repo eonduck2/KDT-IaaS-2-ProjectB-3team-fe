@@ -27,4 +27,3 @@ export default class ImplementedLocationInputter extends AbstractedLocationInput
     this.manualInput = "";
   }
 }
-
