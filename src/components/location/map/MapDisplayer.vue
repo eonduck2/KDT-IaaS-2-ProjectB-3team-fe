@@ -1,7 +1,6 @@
 <template>
   <div>
-    <h3>Map</h3>
-    <div id="map" class="bg-black w-[800px] h-[600px]"></div>
+    <div id="map" class="bg-black w-[70%] h-[600px] rounded-3xl mx-auto"></div>
   </div>
 </template>
 
