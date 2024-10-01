@@ -14,6 +14,12 @@ export default defineComponent({
 
     mapScript.src = `//dapi.kakao.com/v2/maps/sdk.js?appkey=${process.env.VUE_APP_API_KEY}&autoload=false&libraries=services,clusterer,drawing`;
 
+    mapScript.onload = () => {
+      window.kakao.maps.load(() => {
+        this.initMap();
+      });
+    };
+
     document.head.appendChild(mapScript);
   },
 });
