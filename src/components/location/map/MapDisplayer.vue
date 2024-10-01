@@ -5,8 +5,14 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import { defineComponent } from "vue";
+export default defineComponent({
+  name: "MapDisplayer",
+  mounted() {
+    const mapScript = document.createElement("script");
 
-export default defineComponent({});
+    document.head.appendChild(mapScript);
+  },
+});
 </script>
