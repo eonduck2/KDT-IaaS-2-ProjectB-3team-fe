@@ -24,6 +24,7 @@ export default defineComponent({
     document.head.appendChild(mapScript);
   },
   methods: {
+    // 지도 초기화
     initMap() {
       try {
       if (!window.kakao || !window.kakao.maps) {
