@@ -12,6 +12,8 @@ export default defineComponent({
   mounted() {
     const mapScript = document.createElement("script");
 
+    mapScript.src = `//dapi.kakao.com/v2/maps/sdk.js?appkey=${process.env.VUE_APP_API_KEY}&autoload=false&libraries=services,clusterer,drawing`;
+
     document.head.appendChild(mapScript);
   },
 });
