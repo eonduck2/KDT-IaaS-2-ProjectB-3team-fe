@@ -1,7 +1,7 @@
 <template>
   <div>
     <h3>Map</h3>
-    <div id="map"></div>
+    <div id="map" class="bg-black w-[800px] h-[600px]"></div>
   </div>
 </template>
 
