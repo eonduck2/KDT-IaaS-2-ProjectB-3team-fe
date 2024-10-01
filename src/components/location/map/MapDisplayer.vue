@@ -34,6 +34,11 @@ export default defineComponent({
         center: new window.kakao.maps.LatLng(37.5665, 126.978), // 좌표 : 서울
         level: 3, // 지도 확대 레벨
       };
+
+      const container = document.getElementById("map");
+
+      // 지도 생성
+      const map = new window.kakao.maps.Map(container, options);
     },
   },
 });
