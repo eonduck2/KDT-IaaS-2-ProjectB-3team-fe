@@ -9,6 +9,7 @@
 import { defineComponent } from "vue";
 export default defineComponent({
   name: "MapDisplayer",
+  // 컴포넌트가 마운트될 때 카카오맵 API 동적으로 로드
   mounted() {
     const mapScript = document.createElement("script");
 
