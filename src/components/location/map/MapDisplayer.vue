@@ -6,6 +6,10 @@
 </template>
 
 <script>
+/**
+ * @yuxincxoi 24.10.01
+ * * 지도 : 사용자 및 야생 동물의 위치, 피해 예상 지역 등을 표시
+ */
 import { defineComponent } from "vue";
 export default defineComponent({
   name: "MapDisplayer",
