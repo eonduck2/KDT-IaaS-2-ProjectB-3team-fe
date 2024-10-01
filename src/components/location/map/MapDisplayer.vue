@@ -27,20 +27,20 @@ export default defineComponent({
     // 지도 초기화
     initMap() {
       try {
-      if (!window.kakao || !window.kakao.maps) {
-        throw new Error("Kakao Maps API가 로드되지 않았습니다.");
-      }
+        if (!window.kakao || !window.kakao.maps) {
+          throw new Error("Kakao Maps API가 로드되지 않았습니다.");
+        }
 
-      // 지도 옵션
-      const options = {
-        center: new window.kakao.maps.LatLng(37.5665, 126.978), // 좌표 : 서울
-        level: 3, // 지도 확대 레벨
-      };
+        // 지도 옵션
+        const options = {
+          center: new window.kakao.maps.LatLng(37.5665, 126.978), // 좌표 : 서울
+          level: 3, // 지도 확대 레벨
+        };
 
-      const container = document.getElementById("map");
+        const container = document.getElementById("map");
 
-      // 지도 생성
-      const map = new window.kakao.maps.Map(container, options);
+        // 지도 생성
+        const map = new window.kakao.maps.Map(container, options);
       } catch (error) {
         throw new Error(`지도 초기화 중 오류 발생: ${error.message}`);
       }
