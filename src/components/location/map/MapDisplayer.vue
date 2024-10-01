@@ -23,5 +23,12 @@ export default defineComponent({
 
     document.head.appendChild(mapScript);
   },
+  methods: {
+    initMap() {
+      if (!window.kakao || !window.kakao.maps) {
+        throw new Error("Kakao Maps API가 로드되지 않았습니다.");
+      }
+    },
+  },
 });
 </script>
