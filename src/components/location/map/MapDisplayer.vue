@@ -28,6 +28,12 @@ export default defineComponent({
       if (!window.kakao || !window.kakao.maps) {
         throw new Error("Kakao Maps API가 로드되지 않았습니다.");
       }
+
+      // 지도 옵션
+      const options = {
+        center: new window.kakao.maps.LatLng(37.5665, 126.978), // 좌표 : 서울
+        level: 3, // 지도 확대 레벨
+      };
     },
   },
 });
