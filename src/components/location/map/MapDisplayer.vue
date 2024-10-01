@@ -25,6 +25,7 @@ export default defineComponent({
   },
   methods: {
     initMap() {
+      try {
       if (!window.kakao || !window.kakao.maps) {
         throw new Error("Kakao Maps API가 로드되지 않았습니다.");
       }
@@ -39,6 +40,9 @@ export default defineComponent({
 
       // 지도 생성
       const map = new window.kakao.maps.Map(container, options);
+      } catch (error) {
+        throw new Error(`지도 초기화 중 오류 발생: ${error.message}`);
+      }
     },
   },
 });
