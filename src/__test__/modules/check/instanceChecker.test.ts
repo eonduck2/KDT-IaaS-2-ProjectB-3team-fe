@@ -3,7 +3,7 @@ import { jest } from "@jest/globals";
 import instanceChecker from "@/modules/check/instanceChecker";
 import thrower from "@/modules/throw/thrower";
 
-jest.mock("../throw/thrower");
+// jest.mock("../throw/thrower");
 
 describe("instanceChecker", () => {
   afterEach(() => {
